@@ -9,7 +9,7 @@ const CUSTOM_SCHEME = 'webapp';
 // Get the absolute path to the site directory
 const getSiteBasePath = () => {
   if (app.isPackaged) {
-    return path.join(process.resourcesPath, sitePath);
+    return path.join(app.getAppPath(), sitePath);
   }
   return path.join(__dirname, '..', sitePath);
 };
